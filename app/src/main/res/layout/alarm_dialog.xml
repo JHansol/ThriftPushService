@@ -1,0 +1,144 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/dialogRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@id/dialogContainer"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/blur1"
+            android:layout_width="0dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+        <org.sufficientlysecure.htmltextview.HtmlTextView
+            android:id="@+id/dialogName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="none"
+            android:maxLines="2"
+            android:scrollHorizontally="false"
+            android:text="송금"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/dialogAvatar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.14999998" />
+
+        <ImageView
+            android:id="@+id/dialogFromImage"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:text="11111"
+            app:layout_constraintBottom_toBottomOf="@+id/blur1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/dialogAvatar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogName"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/pay" />
+
+        <TextView
+            android:id="@+id/dialogFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/material_grey_600"
+            android:text="네이버페이 송금"
+            app:layout_constraintBottom_toBottomOf="@+id/blur1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/dialogFromImage"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogName"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/dialogFromDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/material_grey_600"
+            android:text=" | "
+            app:layout_constraintBottom_toBottomOf="@+id/blur1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/dialogFrom"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogName"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/dialogDate"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/material_grey_600"
+            android:text="11111"
+            app:layout_constraintBottom_toBottomOf="@+id/blur1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/dialogFromDivider"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogName"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/dialogDivider"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <sol.xyz.linears.push_client.utils.ShapeImageView
+            android:id="@+id/dialogAvatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/blur1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</FrameLayout>

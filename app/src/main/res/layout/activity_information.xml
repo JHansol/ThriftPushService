@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:agv="http://schemas.android.com/apk/res-auto"
+    tools:openDrawer="start">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/material_green_300"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintLeft_toLeftOf="parent"
+            ads:layout_constraintRight_toRightOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent"
+            ads:popupTheme="@color/material_green_300">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginRight="20dp"
+                android:elevation="0dp"
+                android:gravity="left"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="-19dp"
+            android:layout_marginTop="0dp"
+            android:scaleType="fitXY"
+            ads:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            ads:layout_constraintLeft_toLeftOf="parent"
+            ads:layout_constraintTop_toTopOf="parent"
+            ads:layout_constraintVertical_bias="0.0"
+            ads:srcCompat="@drawable/naver" />
+
+        <TextView
+            android:id="@+id/toolbar_title2"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:gravity="left"
+            android:text="알림"
+            android:textColor="#ffffff"
+            android:textSize="22dp"
+            ads:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintLeft_toRightOf="@+id/imageView"
+            ads:layout_constraintRight_toRightOf="parent"
+            ads:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.68" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/material_grey_400"
+            ads:layout_constraintHorizontal_bias="0.0"
+            ads:layout_constraintLeft_toLeftOf="parent"
+            ads:layout_constraintRight_toRightOf="parent"
+            ads:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <TextView
+                android:id="@+id/del2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="읽은 알림 삭제"
+                android:textSize="15dp"
+                ads:layout_constraintBottom_toBottomOf="parent"
+                ads:layout_constraintRight_toLeftOf="@+id/btn1"
+                ads:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/delDivider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" | "
+                android:textSize="15dp"
+                ads:layout_constraintBottom_toBottomOf="parent"
+                ads:layout_constraintRight_toLeftOf="@+id/del2"
+                ads:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/del1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="모두 삭제"
+                android:textSize="15dp"
+                ads:layout_constraintBottom_toBottomOf="parent"
+                ads:layout_constraintRight_toLeftOf="@+id/delDivider"
+                ads:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="B"
+                android:textSize="10dp"
+                ads:layout_constraintBottom_toBottomOf="parent"
+                ads:layout_constraintHorizontal_bias="1.0"
+                ads:layout_constraintLeft_toLeftOf="parent"
+                ads:layout_constraintRight_toRightOf="parent"
+                ads:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <kr.pe.burt.android.lib.animategradientview.AnimateGradientView
+            android:id="@+id/toolbar_message"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            ads:layout_constraintLeft_toLeftOf="parent"
+            ads:layout_constraintRight_toRightOf="parent"
+            ads:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            agv:agv_alpha="1.0"
+            agv:agv_angle="45"
+            agv:agv_animation="flow"
+            agv:agv_duration="2000"
+            agv:agv_endColor="@color/material_grey_300"
+            agv:agv_gradient_scale="1.2"
+            agv:agv_startColor="@color/material_grey_400" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="0dp"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintLeft_toLeftOf="parent"
+            ads:layout_constraintRight_toRightOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
