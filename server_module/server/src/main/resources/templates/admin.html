@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div>
+    <h2>Current Linking Device</h2>
+    <form th:action="@{/admin/messages}" name = "sendPush" th:method="post">
+    <table>
+        <thead>
+        <tr>
+            <th>Check</th>
+            <th>UUID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  th:each="user : ${userList}">
+            <td><input type="checkbox" th:name="${user.key}"/></td>
+            <td th:text="${user.key}"></td>
+        </tr>
+        </tbody>
+    </table>
+        <label>message title</label> <textarea name="push_messages_title" />
+        <label>message content</label><textarea name = "push_messages_content"/>
+        <button type="submit" name="send">Send Message</button>
+    </form>
+</div>
+
+</body>
+</html>

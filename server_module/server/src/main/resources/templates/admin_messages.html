@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div>
+    <h2>Current Linking Device</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>UUID</th>
+            <th>Push Result</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  th:each="result : ${pushResult}">
+            <td th:text = "${result.key}"></td>
+            <td th:text="${result.value.pushResult}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
